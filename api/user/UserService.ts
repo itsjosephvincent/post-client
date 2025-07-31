@@ -6,7 +6,7 @@ class UserService extends BaseAPIService {
     }
 
     async getCurrentUser(): Promise<any> {
-        return await this.request(`/users/current/user`, 'GET')
+        return await this.request(`/users/current/online`, 'GET')
     }
 
     async createUser(params: object): Promise<any> {
