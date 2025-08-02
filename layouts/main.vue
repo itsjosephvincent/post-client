@@ -160,6 +160,7 @@ import {
     Cog6ToothIcon,
     HomeIcon,
     XMarkIcon,
+    DocumentDuplicateIcon
 } from '@heroicons/vue/24/outline'
 import { ChevronDownIcon } from '@heroicons/vue/20/solid'
 import { useUserStore } from '@/store/user'
@@ -170,6 +171,7 @@ const user = Object(userStore.getUser)
 
 const navigation = [
     { name: 'Dashboard', href: '/dashboard', icon: HomeIcon, activeRouteNames: ['dashboard'] },
+    { name: 'Pages', href: '/pages', icon: DocumentDuplicateIcon, activeRouteNames: ['pages'] },
 ]
 
 const state = reactive({
