@@ -17,13 +17,15 @@
 
         <div class="mt-4">
             <TablePages :head="state.head" :body="state.body" />
-            <Pagination v-if="state.body?.data?.length > 0" :data="state.body" @previous="previous()" @next="next()" />
+            <PaginationTable v-if="state.body?.data?.length > 0" :data="state.body" @previous="previous()"
+                @next="next()" />
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
 import { facebookPageService } from '@/api/facebookPage/FacebookPageService'
+
 const runtimeConfig = useRuntimeConfig()
 
 let currentPage = 1

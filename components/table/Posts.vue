@@ -15,20 +15,21 @@
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-200 bg-white">
-                        <tr v-if="props.body?.data?.length > 0" v-for="(body, index) in props.body.data"
-                            :key="body.uuid">
+                        <tr v-if="props.body?.data?.length > 0" v-for="(body, index) in props.body.data" :key="index">
                             <td class="whitespace-nowrap px-3 py-4 text-base text-gray-500">
-                                {{ body.page_id }}
+                                {{ body.id }}
                             </td>
                             <td class="whitespace-nowrap px-3 py-4 text-base text-gray-500">
-                                {{ body.name }}
+                                {{ truncateWords(body.message, 10) }}
                             </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-base text-gray-500">
+                                {{ moment(body.created_time).format('MMM DD, YYYY') }} </td>
                             <td
                                 class="whitespace-nowrap py-4 pl-3 pr-4 flex items-center justify-end font-medium sm:pr-6">
-                                <NuxtLink @click="goToView(body.uuid)"
+                                <NuxtLink @click="goToView(body.id)"
                                     class="cursor-pointer flex items-center gap-1 group">
                                     <EyeIcon class="h-5 w-5" />
-                                    <span class="group-hover:underline">View Posts</span>
+                                    <span class="group-hover:underline">View Insights</span>
                                 </NuxtLink>
                             </td>
                         </tr>
@@ -45,8 +46,12 @@
 </template>
 
 <script setup lang="ts">
-import { EyeIcon } from '@heroicons/vue/20/solid';
+import { EyeIcon } from '@heroicons/vue/20/solid'
+import { useTextUtils } from '@/composables/text'
 import moment from 'moment'
+
+
+const { truncateWords } = useTextUtils();
 
 const props = defineProps({
     head: {
@@ -62,7 +67,9 @@ const props = defineProps({
 const route = useRoute()
 const path = route.fullPath
 
+console.log(path)
+
 function goToView(data: any) {
-    navigateTo(`${path}/${data}`)
+    navigateTo(`${path}/insights/${data}`)
 }
 </script>

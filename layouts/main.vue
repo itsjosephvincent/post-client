@@ -170,8 +170,18 @@ const userStore = useUserStore()
 const user = Object(userStore.getUser)
 
 const navigation = [
-    { name: 'Dashboard', href: '/dashboard', icon: HomeIcon, activeRouteNames: ['dashboard'] },
-    { name: 'Pages', href: '/pages', icon: DocumentDuplicateIcon, activeRouteNames: ['pages'] },
+    {
+        name: 'Dashboard', href: '/dashboard', icon: HomeIcon, activeRouteNames: [
+            'dashboard'
+        ]
+    },
+    {
+        name: 'Pages', href: '/pages', icon: DocumentDuplicateIcon, activeRouteNames: [
+            'pages',
+            'pages-uuid',
+            'pages-uuid-insights-id',
+        ]
+    },
 ]
 
 const state = reactive({

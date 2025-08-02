@@ -51,9 +51,9 @@ async function fetchCurrentUser() {
 async function connectFacebook() {
     const baseUri = 'https://www.facebook.com/v23.0/dialog/oauth';
     const params = {
-        client_id: '2550414568633318',
+        client_id: '1026426192691369',
         redirect_uri: 'http://localhost:3000/oauth',
-        scope: 'pages_show_list',
+        scope: 'public_profile,read_insights,pages_show_list,pages_read_engagement,pages_read_user_content,pages_manage_posts,pages_manage_engagement',
         response_type: 'code'
     };
 
