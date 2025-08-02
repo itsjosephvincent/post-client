@@ -83,7 +83,6 @@ async function next(data: any) {
     try {
         let params = {
             next_url: data,
-            cursor: state.body.paging.cursors.after
         }
         const response = await facebookPageService.getNextPagePosts(params)
         if (response.data) {
