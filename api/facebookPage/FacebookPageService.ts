@@ -6,15 +6,15 @@ class FacebookPageService extends BaseAPIService {
     }
 
     async getPagePosts(uuid: string): Promise<any> {
-        return await this.request(`/facebook-pages/${uuid}/posts`, 'GET')
+        return await this.request(`/facebook-pages/${uuid}`, 'GET')
     }
 
     async getNextPagePosts(params: object): Promise<any> {
-        return await this.request(`/facebook-pages/next/new/posts`, 'GET', params)
+        return await this.request(`/facebook-pages/next/post`, 'GET', params)
     }
 
-    async getPreviousPagePosts(params: object): Promise<any> {
-        return await this.request(`/facebook-pages/previous/old/posts`, 'GET', params)
+    async getPostInsights(params: object): Promise<any> {
+        return await this.request(`/facebook-pages/post/insights`, 'GET', params)
     }
 }
 
