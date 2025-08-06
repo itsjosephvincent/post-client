@@ -16,6 +16,10 @@ class FacebookPageService extends BaseAPIService {
     async getPostInsights(params: object): Promise<any> {
         return await this.request(`/facebook-pages/post/insights`, 'GET', params)
     }
+
+    async getPostReactInsights(params: object): Promise<any> {
+        return await this.request(`/facebook-pages/post/react/insights`, 'GET', params)
+    }
 }
 
 export const facebookPageService = new FacebookPageService()
