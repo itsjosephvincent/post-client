@@ -26,7 +26,7 @@
             <div class="relative h-screen isolate overflow-hidden pt-14">
                 <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="" class="absolute inset-0 -z-10 size-full object-cover" />
-                <div class="absolute inset-0 bg-black/50 -z-10"></div>
+                <div class="absolute inset-0 bg-black/70 -z-10"></div>
                 <div aria-hidden="true"
                     class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
                     <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
@@ -36,10 +36,11 @@
                 <div class="mx-auto max-w-7xl px-6 lg:px-8">
                     <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
                         <div class="text-center">
-                            <h1 class="text-balance text-5xl font-semibold tracking-tight text-white sm:text-7xl">
+                            <h1
+                                class="text-balance text-5xl font-semibold tracking-tight text-white sm:text-7xl drop-shadow-lg">
                                 PRA Services
                             </h1>
-                            <p class="mt-8 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8">
+                            <p class="mt-8 text-pretty text-lg font-medium text-gray-200 sm:text-xl/8 drop-shadow">
                                 Actionable insights for your Facebook Pages — all in one place. From post performance to
                                 audience engagement, our platform helps you track what matters most. Whether you're
                                 analyzing reach, reactions, or comments, we deliver clear, reliable analytics to help
