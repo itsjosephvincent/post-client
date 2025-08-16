@@ -52,7 +52,7 @@ async function connectFacebook() {
     const baseUri = 'https://www.facebook.com/v23.0/dialog/oauth';
     const params = {
         client_id: '1026426192691369',
-        redirect_uri: 'https://praservices.online/settings/oauth',
+        redirect_uri: 'https://praservices.online/oauth',
         scope: 'public_profile,read_insights,pages_show_list,pages_read_engagement,pages_read_user_content,pages_manage_posts,pages_manage_engagement',
         response_type: 'code'
     };
